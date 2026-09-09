@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashish Tyagi | Freelance Web Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Ashish Tyagi | Freelance Web Developer | React, JavaScript & Website Bug Fixing</title>
+  <meta name="description" content="Hire Ashish Tyagi - Expert Freelance Web Developer specializing in modern responsive websites, React apps, JavaScript, HTML/CSS bug fixing and AI-powered solutions. Fast delivery & clean code." />
+  <meta name="keywords" content="freelance web developer, react developer, javascript bug fix, html css fix, website development, hire web developer, react bug fixing, frontend developer, ashish tyagi, fiverr web developer" />
+  <meta name="author" content="Ashish Tyagi" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ashish Tyagi | Freelance Web Developer" />
+  <meta property="og:description" content="Modern websites, React apps & professional bug fixing services. Clean code. Fast delivery." />
+  <meta property="og:image" content="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/370bbc57d8e97d441c3e6108338713d3-1606395276065/d3ecfac5-315d-4abf-9a78-eb5809f4a06099.jpg" />
+  <meta property="og:url" content="https://yourusername.github.io" />
+  <meta property="og:type" content="website" />
+
   <style>
     * {
       margin: 0;
@@ -12,259 +26,306 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f1e3;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #fdf6e3, #f5e6c8);
       color: #3d2c1e;
-      line-height: 1.6;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* 3D Card Effect */
+    .card {
+      background: rgba(255, 250, 240, 0.95);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 
+        0 10px 30px rgba(139, 90, 43, 0.12),
+        0 4px 12px rgba(0,0,0,0.05),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(212, 165, 116, 0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 20px 40px rgba(139, 90, 43, 0.18),
+        0 8px 20px rgba(0,0,0,0.08);
     }
 
     header {
-      background: linear-gradient(135deg, #f5e6c8, #e8d5b5);
-      padding: 40px 20px;
+      background: linear-gradient(135deg, #f8e9c9, #e8d4a8);
+      padding: 60px 20px 50px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+      animation: float 15s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid #fff;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      margin-bottom: 20px;
+      border: 6px solid #fff;
+      box-shadow: 0 15px 35px rgba(139, 90, 43, 0.25);
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.08) rotate(3deg);
     }
 
     header h1 {
-      font-size: 2.4rem;
+      font-size: 2.8rem;
       color: #2c1e12;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     }
 
-    header p.tagline {
-      font-size: 1.15rem;
+    .tagline {
+      font-size: 1.25rem;
       color: #5c4033;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
     }
 
     .cta-buttons {
       display: flex;
-      gap: 15px;
+      gap: 18px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 15px;
+      position: relative;
+      z-index: 2;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 28px;
+      padding: 14px 32px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.05rem;
       transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
     .btn-primary {
-      background: #8b5a2b;
+      background: linear-gradient(135deg, #8b5a2b, #a67c3d);
       color: white;
     }
 
     .btn-primary:hover {
-      background: #6d4520;
-      transform: translateY(-2px);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(139, 90, 43, 0.3);
     }
 
     .btn-secondary {
-      background: transparent;
-      border: 2px solid #8b5a2b;
+      background: white;
       color: #8b5a2b;
+      border: 2px solid #8b5a2b;
     }
 
     .btn-secondary:hover {
       background: #8b5a2b;
       color: white;
+      transform: translateY(-4px);
+    }
+
+    .btn-profile {
+      background: linear-gradient(135deg, #5c4033, #3d2c1e);
+      color: white;
     }
 
     section {
-      max-width: 900px;
-      margin: 50px auto;
+      max-width: 980px;
+      margin: 60px auto;
       padding: 0 20px;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #2c1e12;
-      margin-bottom: 25px;
-      padding-bottom: 10px;
-      border-bottom: 3px solid #d4a574;
+      margin-bottom: 30px;
+      position: relative;
       display: inline-block;
     }
 
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(90deg, #d4a574, transparent);
+      border-radius: 2px;
+    }
+
     .about-text {
-      background: #fffaf0;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    .service-card {
-      background: #fffaf0;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
 
     .service-card h3 {
       color: #8b5a2b;
-      margin-bottom: 12px;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
     }
 
     .service-card a {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
       color: #8b5a2b;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border 0.3s;
     }
 
     .service-card a:hover {
-      text-decoration: underline;
-    }
-
-    .experience, .skills, .education {
-      background: #fffaf0;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .job {
-      margin-bottom: 20px;
-    }
-
-    .job h3 {
-      color: #8b5a2b;
-    }
-
-    .job .meta {
-      font-size: 0.95rem;
-      color: #6b5344;
-      margin: 5px 0 10px;
+      border-bottom: 2px solid #8b5a2b;
     }
 
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 15px;
     }
 
     .skill {
-      background: #e8d5b5;
-      color: #3d2c1e;
-      padding: 8px 16px;
+      background: linear-gradient(135deg, #e8d5b5, #d4a574);
+      color: #2c1e12;
+      padding: 10px 20px;
       border-radius: 50px;
+      font-weight: 600;
       font-size: 0.95rem;
-      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(139, 90, 43, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
-      background: #e8d5b5;
-      margin-top: 60px;
-      color: #3d2c1e;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #e8d4a8, #d4b483);
+      margin-top: 80px;
     }
 
     footer a {
-      color: #8b5a2b;
-      font-weight: 600;
+      color: #5c4033;
+      font-weight: 700;
+      margin: 0 12px;
+      text-decoration: none;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.9rem;
-      }
-      .profile-img {
-        width: 120px;
-        height: 120px;
-      }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      .profile-img { width: 130px; height: 130px; }
+      .btn { padding: 12px 24px; font-size: 0.95rem; }
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 40px 15px; }
+      header h1 { font-size: 1.9rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/370bbc57d8e97d441c3e6108338713d3-1606395276065/d3ecfac5-315d-4abf-9a78-eb5809f4a060.jpg" alt="Ashish Tyagi" class="profile-img">
+    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/370bbc57d8e97d441c3e6108338713d3-1606395276065/d3ecfac5-315d-4abf-9a78-eb5809f4a06099.jpg" 
+         alt="Ashish Tyagi - Freelance Web Developer" 
+         class="profile-img">
+    
     <h1>Ashish Tyagi</h1>
-    <p class="tagline">Freelance Software Developer | Web • AI • Custom Solutions</p>
+    <p class="tagline">Freelance Software Developer | Web • React • AI Solutions</p>
     
     <div class="cta-buttons">
-      <a href="https://www.fiverr.com/s/GPxDm0e" class="btn btn-primary" target="_blank">Build Website / Web App</a>
-      <a href="https://www.fiverr.com/s/43Gmrjy" class="btn btn-secondary" target="_blank">Fix Bugs (HTML/CSS/JS/React)</a>
+      <a href="https://www.fiverr.com/s/GPxDm0e" class="btn btn-primary" target="_blank" rel="noopener">Build Website / Web App</a>
+      <a href="https://www.fiverr.com/s/43Gmrjy" class="btn btn-secondary" target="_blank" rel="noopener">Fix Bugs Now</a>
+      <a href="https://www.fiverr.com/supeer_56" class="btn btn-profile" target="_blank" rel="noopener">My Fiverr Profile</a>
     </div>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <div class="about-text">
-      <p>Hi, I’m <strong>Ashish Tyagi</strong> — a Software Developer specializing in Web Development, AI, and custom software solutions.</p>
+    <div class="card about-text">
+      <p>Hi, I’m <strong>Ashish Tyagi</strong> — a passionate Software Developer specializing in <strong>Web Development, AI, and custom software solutions</strong>.</p>
       <br>
-      <p>I build modern websites, web apps, dashboards, APIs, automation tools, and AI-powered applications using <strong>JavaScript, React, Node.js, Python, HTML, and CSS</strong>.</p>
+      <p>I build modern responsive websites, web apps, dashboards, APIs, automation tools, and AI-powered applications using <strong>JavaScript, React, Node.js, Python, HTML & CSS</strong>.</p>
       <br>
-      <p>Clean code. Practical solutions. Quality results.</p>
+      <p><em>Clean code. Practical solutions. Quality results.</em></p>
     </div>
   </section>
 
   <section>
     <h2>My Services</h2>
     <div class="services">
-      <div class="service-card">
+      <div class="card service-card">
         <h3>Modern Website & Web App</h3>
-        <p>Clean, responsive websites and web applications with modern design and optional AI features.</p>
-        <a href="https://www.fiverr.com/s/GPxDm0e" target="_blank">View Gig →</a>
+        <p>Beautiful, fully responsive websites and web applications with clean design and optional AI features. Perfect for businesses and personal brands.</p>
+        <a href="https://www.fiverr.com/s/GPxDm0e" target="_blank" rel="noopener">View Gig →</a>
       </div>
-      <div class="service-card">
-        <h3>Bug Fixing</h3>
-        <p>Fast and reliable fixes for HTML, CSS, JavaScript, React issues, layout problems & responsive errors.</p>
-        <a href="https://www.fiverr.com/s/43Gmrjy" target="_blank">View Gig →</a>
+      <div class="card service-card">
+        <h3>Expert Bug Fixing</h3>
+        <p>Fast & reliable fixes for HTML, CSS, JavaScript, React errors, layout issues, responsive problems and functionality bugs.</p>
+        <a href="https://www.fiverr.com/s/43Gmrjy" target="_blank" rel="noopener">View Gig →</a>
       </div>
     </div>
   </section>
 
   <section>
     <h2>Work Experience</h2>
-    <div class="experience">
-      <div class="job">
-        <h3>Freelance Software Developer</h3>
-        <div class="meta">Self-Employed • Aug 2022 – Present • 4 yrs 1 mo</div>
-        <p>I create websites, web applications, business management systems, dashboards, and custom software solutions. My work includes frontend & backend development, responsive UI design, API integration, database management, authentication, debugging, deployment, and performance optimization.</p>
-        <br>
-        <p>Projects include gym management software, school management systems, content management platforms, and other custom web applications.</p>
-      </div>
+    <div class="card">
+      <h3 style="color:#8b5a2b; margin-bottom:8px;">Freelance Software Developer</h3>
+      <p style="color:#6b5344; margin-bottom:15px;">Self-Employed • Aug 2022 – Present</p>
+      <p>Creating websites, web applications, business management systems, dashboards and custom software. Expertise in frontend & backend development, responsive UI, API integration, authentication, debugging and performance optimization.</p>
+      <br>
+      <p>Delivered projects including gym management software, school management systems and content platforms.</p>
     </div>
   </section>
 
   <section>
     <h2>Skills & Expertise</h2>
-    <div class="skills">
+    <div class="card">
       <div class="skills-list">
-        <span class="skill">Full Stack Web Development</span>
+        <span class="skill">Full Stack Development</span>
         <span class="skill">JavaScript</span>
         <span class="skill">React</span>
         <span class="skill">Node.js</span>
@@ -272,8 +333,8 @@
         <span class="skill">Python</span>
         <span class="skill">Website Bug Fixes</span>
         <span class="skill">Chatbot Development</span>
-        <span class="skill">AI Tools</span>
-        <span class="skill">API Integration</span>
+        <span class="skill">AI Integration</span>
+        <span class="skill">API Development</span>
         <span class="skill">Responsive Design</span>
         <span class="skill">Software Engineering</span>
       </div>
@@ -282,22 +343,21 @@
 
   <section>
     <h2>Education & Certifications</h2>
-    <div class="education">
-      <p><strong>Higher Secondary School</strong><br>
-      Certificate Degree • AI Tools • India • Graduated 2001</p>
+    <div class="card">
+      <p><strong>Higher Secondary School</strong> — Certificate Degree (AI Tools) • India</p>
       <br>
-      <p><strong>Certification:</strong><br>
-      be10x AI Tools Workshop • 2026</p>
+      <p><strong>Certification:</strong> be10x AI Tools Workshop • 2026</p>
     </div>
   </section>
 
   <footer>
-    <p>Ready to work together?</p>
-    <p style="margin-top: 10px;">
-      <a href="https://www.fiverr.com/s/GPxDm0e" target="_blank">Website Gig</a> • 
-      <a href="https://www.fiverr.com/s/43Gmrjy" target="_blank">Bug Fix Gig</a>
-    </p>
-    <p style="margin-top: 15px; font-size: 0.9rem;">© 2026 Ashish Tyagi • Freelance Developer</p>
+    <p style="font-size:1.2rem; margin-bottom:15px;">Ready to start your project?</p>
+    <div>
+      <a href="https://www.fiverr.com/s/GPxDm0e" target="_blank" rel="noopener">Website Gig</a>
+      <a href="https://www.fiverr.com/s/43Gmrjy" target="_blank" rel="noopener">Bug Fix Gig</a>
+      <a href="https://www.fiverr.com/supeer_56" target="_blank" rel="noopener">Fiverr Profile</a>
+    </div>
+    <p style="margin-top:25px; font-size:0.95rem;">© 2026 Ashish Tyagi • Freelance Web Developer</p>
   </footer>
 
 </body>
